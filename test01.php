@@ -51,7 +51,7 @@ function create_tree($cats, $parent_id)
         $tree = '<ul>';
         foreach ($cats[$parent_id] as $cat) {
             $tree .= '<li>' . $cat['NAME'];
-            //не является ли текущий потомок в свою очередь чьим-то родителем
+            //не является ли текущий потомок чьим-то родителем
             $tree .= create_tree($cats, $cat['ID']);
             $tree .= '</li>';
         }
